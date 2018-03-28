@@ -7,8 +7,9 @@
 	<script src="js/jquery.min.js"></script>
 	<!-- Custom Theme files -->
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-	<link href="js/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-	<link href='https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900' rel='stylesheet' type='text/css'>
+	<link href="js/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,900' rel='stylesheet'
+	      type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
 	<!-- Custom Theme files -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -174,81 +175,94 @@ Lipstick tube"/>
 	<div class="container">
 		<div class="banner-bottom">
 			<!--<div class="banner-bottom-left">-->
-				<!--<h2>B<br>U<br>Y</h2>-->
+			<!--<h2>B<br>U<br>Y</h2>-->
 			<!--</div>-->
-			<div class="banner-bottom-right">
-				<div class="callbacks_container">
-					<ul class="rslides" id="slider4">
-						<li>
-							<div class="banner-info">
-								<h3>Smart But Casual</h3>
-								<p>Start your shopping here...</p>
+			<div class="callbacks_container">
+				<ul class="rslides" id="slider4">
+					<li>
+						<img src="./images/banner1-1.jpg" class="banner-img">
+						<div class="banner-info">
+							<h3>Best Quality</h3>
+							<p>Start your shopping here...</p>
+							<div class="shop">
+								<a href="single.html">CONTACT US NOW</a>
 							</div>
-						</li>
-						<li>
-							<div class="banner-info">
-								<h3>Shop Online</h3>
-								<p>Start your shopping here...</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner1-2.jpg" class="banner-img">
+						<div class="banner-info">
+							<h3>Top Team</h3>
+							<p>Start your shopping here...</p>
+							<div class="shop">
+								<a href="single.html">CONTACT US NOW</a>
 							</div>
-						</li>
-						<li>
-							<div class="banner-info">
-								<h3>Pack your Bag</h3>
-								<p>Start your shopping here...</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner1-3.jpg" class="banner-img">
+						<div class="banner-info">
+							<h3>Stable Source Of Goods</h3>
+							<p>Start your shopping here...</p>
+							<div class="shop">
+								<a href="single.html">CONTACT US NOW</a>
 							</div>
-						</li>
-					</ul>
-				</div>
-				<!--banner-->
-				<script src="js/responsiveslides.min.js"></script>
-				<script>
-                    // You can also use "$(window).load(function() {"
-                    $(function () {
-                        // Slideshow 4
-                        $("#slider4").responsiveSlides({
-                            auto: true,
-                            pager: true,
-                            nav: false,
-                            speed: 500,
-                            namespace: "callbacks",
-                            before: function () {
-                                $('.events').append("<li>before event fired.</li>");
-                            },
-                            after: function () {
-                                $('.events').append("<li>after event fired.</li>");
-                            }
-                        });
-
-                    });
-				</script>
+						</div>
+					</li>
+				</ul>
 			</div>
+			<!--banner-->
+			<script src="js/responsiveslides.min.js"></script>
+			<script>
+                // You can also use "$(window).load(function() {"
+                $(function () {
+                    // Slideshow 4
+                    $("#slider4").responsiveSlides({
+                        auto: true,
+                        pager: true,
+                        nav: false,
+                        speed: 100,
+                        namespace: "callbacks",
+                        before: function () {
+                            $('.events').append("<li>before event fired.</li>");
+                        },
+                        after: function () {
+                            $('.events').append("<li>after event fired.</li>");
+                        }
+                    });
+
+                });
+			</script>
 			<div class="clearfix"></div>
 		</div>
-		<div class="shop">
-			<a href="single.html">SHOP COLLECTION NOW</a>
-		</div>
+
 	</div>
 </div>
 <!-- content-section-starts-here -->
 <div class="container">
 	<div class="main-content">
 		<div class="online-strip">
-			<div class="col-md-4 follow-us">
-				<h3>follow us : <a class="twitter" href="#"></a><a class="facebook" href="#"></a></h3>
+			<div class="col-md-3 follow-us">
+				<h3>follow us :
+					<!--<a class="twitter" href="#"></a>-->
+					<a class="facebook" href="#"></a>
+				</h3>
 			</div>
-			<div class="col-md-4 shipping-grid">
+			<div class="col-md-5 shipping-grid online-order">
+				<div class="shipping">
+					<img src="images/icon1.png" alt=""/>
+				</div>
+				<p>Contact Us</p>
+				<h3>Email: milltor-service@outlook.com</h3>
+				<div class="clearfix"></div>
+			</div>
+			<div class="col-md-4 shipping-grid online-order">
 				<div class="shipping">
 					<img src="images/shipping.png" alt=""/>
 				</div>
-				<div class="shipping-text">
-					<h3>Free Shipping</h3>
-					<p>on orders over $ 199</p>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="col-md-4 online-order">
 				<p>Order online</p>
-				<h3>Tel:999 4567 8902</h3>
+				<h3>Tel: +8618428360735</h3>
+				<div class="clearfix"></div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
