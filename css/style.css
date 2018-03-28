@@ -121,34 +121,16 @@ a.simpleCart_empty {
     float: left;
 }
 
-/*.banner {*/
-/*background: url("../images/banner4.jpg") no-repeat 0px 0px;*/
-/*background-size: cover;*/
-/*-moz-background-size: cover;*/
-/*-o-background-size: cover;*/
-/*-ms-background-size: cover;*/
-/*-webkit-background-size: cover;*/
-/*min-height: 705px;*/
-/*}*/
-
 .banner-bottom .rslides > li {
     position: relative;
     margin-top: 60px;
 }
 
 .banner-img {
-    width: 50%;
-    float: left;
+    width: 100%;
 }
 
 .banner-info {
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*right: 0;*/
-    /*width: 50%;*/
-    width: 50%;
-    float: left;
     margin-top: 80px;
     text-align: center;
     z-index: 999;
@@ -202,9 +184,9 @@ a.simpleCart_empty {
 }
 
 .navbar-default .navbar-nav > li.nav-active > a {
-    background-color: transparent;
+    background-color: #D39D5D;
     border: 1px solid #D39D5D;
-    color: #D39D5D;
+    color: #fff;
 }
 
 .navbar-nav {
@@ -525,25 +507,25 @@ ul.multi-column-dropdown h6 {
     margin: 30px 0;
 }
 
-.banner-info .shop {
-    margin-top: 80px;
+.banner-info .contact-btn {
+    margin-top: 40px;
+    padding: 12px 20px;
 }
 
-.banner-info .shop a {
-    text-decoration: none;
+.banner-info .contact-btn a {
     padding: 12px 20px;
+    text-decoration: none;
     /*border: 1px solid #000;*/
     /*color: #000;*/
-    font-size: 18px;
+    /*font-size: 18px;*/
     letter-spacing: 2px;
-
     border-radius: 25px;
     color: #fff;
     background-color: #D39D5D;
     border: 1px solid #D39D5D;
 }
 
-.banner-info .shop a:hover {
+.banner-info .contact-btn a:hover {
     /*color: #fff;*/
     background-color: transparent;
     color: #D39D5D;
@@ -558,27 +540,12 @@ ul.multi-column-dropdown h6 {
     padding: 10px 0;
     text-align: center;
     margin: 40px 0 30px;
+    word-wrap:break-word ;
 }
 
 .shipping-grid {
     border-left: 1px solid #C8C8C8;
-    border-right: 1px solid #C8C8C8;
-}
-
-.shipping {
-    float: left;
-    width: 10%;
-    margin-right: 2%;
-    margin-left: 2%;
-}
-
-.shipping img {
-    width: 100%;
-    margin-top: 10%;
-}
-
-.shipping-text {
-    float: left;
+    /*border-right: 1px solid #C8C8C8;*/
 }
 
 .online-strip h3 {
