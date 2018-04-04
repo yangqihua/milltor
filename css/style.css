@@ -270,6 +270,10 @@ ul.multi-column-dropdown h6 {
     padding: 15px 20px;
 }
 
+.dropdown-menu.columns-1 {
+    padding: 15px 20px;
+}
+
 .dropdown-menu.columns-3 {
     min-width: 550px;
     padding: 15px 20px;
