@@ -5,6 +5,7 @@ $(function () {
     var imgs = '';
     var src = '';
     var productName = '';
+    var otherUls = '';
     for (var key in images) {
         var product = images[key];
         for (var menu in product) {
@@ -20,12 +21,27 @@ $(function () {
                         '                              class="img-responsive" alt=""/></div>' +
                         '</li>'
                 }
+                var otherImg = '';
+                for (var otherKey in product) {
+                    if(otherKey === productName){
+                        continue
+                    }
+                    otherImg = 'images/products/'+key+'/'+otherKey+'/'+product[otherKey][0]+'.jpg';
+                    otherUls+='<div class="col-md-4 product simpleCart_shelfItem text-center">' +
+                        '<a href="single.html?name='+key+'/'+otherKey+'"><img src="'+otherImg+'" alt=""/></a>' +
+                        '<div class="mask">' +
+                        '<a href="single.html?name='+key+'/'+otherKey+'">Quick View</a>' +
+                        '</div>' +
+                        '<a class="product_name" href="single.html?name='+key+'/'+otherKey+'">'+otherKey+'</a>' +
+                        '</div>';
+                }
             }
             productsUls += '<li><a class="'+active+'" href="single.html?name='+key+'/'+menu+'">'+menu+'</a></li>';
         }
     }
     $('#product-list-id').append(productsUls);
     $('#slide-id').append(imgs);
+    $('#related-id').after(otherUls);
 
     console.log('productName:',productName)
     $('#product-name-id').text(productName);
