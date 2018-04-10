@@ -34,7 +34,7 @@ $(function () {
     if (path.indexOf('contact.html') !== -1) {
         active = 'nav-active'
     }
-    uls += '<li class="' + active + '"><a href="contact.html">CONTACT</a></li>';
+    uls += '<li class="' + active + '"><a href="contact.html">ABOUT US</a></li>';
     $('#nav-btn').append(uls);
 });
 

@@ -132,7 +132,7 @@ html[xmlns] .flexslider .slides {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background: url(../images/img-sprite.png) -149px -6px ;
+  /*background: url(../images/img-sprite.png) -149px -6px ;*/
   text-indent: -9999px ;
 }
 
@@ -142,7 +142,7 @@ html[xmlns] .flexslider .slides {
 .flex-direction-nav .flex-next {
   right: -50px;
 
-   background: url(../images/img-sprite.png) -184px -6px ;
+   /*background: url(../images/img-sprite.png) -184px -6px ;*/
   
 }
 .flexslider:hover .flex-direction-nav .flex-prev {
@@ -227,17 +227,17 @@ html[xmlns] .flexslider .slides {
   cursor: default;
 }
 .flex-control-thumbs {
-  margin: 5px 0 0;
+  /*margin: 5px 0 0;*/
   position: static;
   overflow: hidden;
 }
 .flex-control-thumbs li {
-  width: 32.2%;
+  width: 32.3%;
   float: left;
-  margin: 0 1% 0 0;
+  margin: 1% 1% 0 0;
 }
-.flex-control-thumbs li:nth-child(4){
-	margin:0;
+.flex-control-thumbs li:nth-child(3){
+	margin:1% 0 0 0;;
 }
 .flex-control-thumbs img {
   width: 100%;

@@ -1049,9 +1049,9 @@ ul.tags_links li a:hover {
 .new-product {
     width: 78%;
     float: right;
-    background: rgba(245, 243, 243, 0.27);
-    min-height: 800px;
-    padding: 2em;
+    /*background: rgba(245, 243, 243, 0.27);*/
+    /*min-height: 800px;*/
+    /*padding: 0 1em;*/
 }
 
 ul.product-top-list {
@@ -2442,7 +2442,8 @@ p.tab-text {
 }
 
 .dress-name {
-    margin: 30px 0;
+    margin: 0 0 30px 0;
+    line-height: 2em;
 }
 
 .dress-name h3 {
@@ -2457,7 +2458,7 @@ p.tab-text {
     margin-top: 16px;
     font-size: 13px;
     line-height: 23px;
-    color: #CAC9C9;
+    color: #999;
 }
 
 .dress-name span {
@@ -2505,19 +2506,22 @@ p.right {
 
 .purchase {
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .purchase a {
-    float: left;
-    width: 50%;
-    font-size: 14px;
-    color: #000;
-    text-decoration: underline;
-    letter-spacing: 1px;
-    margin-top: 1px;
+    padding: 10px 50px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #D39D5D;
+    border: 1px solid #D39D5D;
 }
 
 .purchase a:hover {
+    background-color: transparent;
     color: #D39D5D;
 }
 
