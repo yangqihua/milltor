@@ -948,6 +948,11 @@ ul.product-list li a:hover {
     -ms-transition: 0.5s all;
 }
 
+ul.product-list li a.active {
+    background: #D39D5D;
+    color: #fff;
+}
+
 .product-listy h2 {
     color: #fff;
     background: #D39D5D;
