@@ -20,43 +20,4 @@ $(function () {
             '</li>';
     }
     $('#home-btn').after(uls);
-    
-    
-    var divs = '';
-    var count = 0;
-    for(var key in images){
-        var product = images[key];
-        for(var menu in product){
-            if(count >=12){
-                break;
-            }
-            var img = 'images/products/'+key+'/'+menu+'/'+product[menu][0]+'.jpg';
-            divs += '<div class="col-md-4 product simpleCart_shelfItem text-center">' +
-                '<a href="single.html">' +
-                '<img src="'+img+'" alt=""/>' +
-                // '<div style="background: red;width: 100%;height: 300px;"/>' +
-                '</a>' +
-                '<div class="mask">' +
-                '<a href="single.html">Quick View</a>' +
-                '</div>' +
-                '<a class="product_name" href="single.html">'+menu+'</a>' +
-                '</div>';
-            count++;
-        }
-    }
-    $('#pupular-id').after(divs);
-
-    var fetures = '';
-    var products = images['MP-series'];
-
-    for(var menu in products){
-        var img = 'images/products/MP-series/'+menu+'/'+product[menu][0]+'.jpg';
-        fetures+= '<li><a href="single.html">' +
-            '<img src="'+img+'"  style="padding:10px;" class="img-responsive" alt=""/></a>' +
-            '<div class="product liked-product simpleCart_shelfItem">' +
-            '<a class="like_name" href="single.html">'+menu+'</a>' +
-            '</div>' +
-            '</li>';
-    }
-    $('#flexiselDemo3').append(fetures);
 });
