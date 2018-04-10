@@ -43,7 +43,6 @@ $(function () {
     $('#slide-id').append(imgs);
     $('#related-id').after(otherUls);
 
-    console.log('productName:',productName)
     $('#product-name-id').text(productName);
     $('.dress-name span').text('$ 0.40-1.20');
 });

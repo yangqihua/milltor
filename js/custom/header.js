@@ -11,7 +11,7 @@ $(function () {
         var product = images[key];
         var lis = '';
         for (var menu in product) {
-            lis += '<li><a href="products.html">' + menu + '</a></li>';
+            lis += '<li><a href="single.html?name='+key+'/'+menu+'">' + menu + '</a></li>';
         }
         active = '';
         if (querys.hasOwnProperty('name') && querys['name'].indexOf(key) !== -1) {
@@ -36,6 +36,17 @@ $(function () {
     }
     uls += '<li class="' + active + '"><a href="contact.html">ABOUT US</a></li>';
     $('#nav-btn').append(uls);
+
+
+    $('.contact-btn').on('click',function (e) {
+        layer.confirm('you can email to <span style="color:#D39D5D;">milltor-service@outlook.com</span>', {
+            title: 'Tips',
+            shadeClose: true, //开启遮罩关闭
+            skin: 'layui-layer-molv', //样式类名
+            btn: [] //按钮
+        });
+    })
+
 });
 
 function getRequest() {
