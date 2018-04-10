@@ -65,6 +65,20 @@ label {
     margin: 0;
 }
 
+/*about us*/
+
+.about-content {
+    font-size: 16px;
+    color: #666;
+    line-height: 30px;
+    margin: 10px 40px;
+}
+
+.about-content p {
+    text-indent: 2.5em;
+    padding: 10px 10px;
+}
+
 /*-----start-header----*/
 .header-top-strip {
     padding: 8px 0 14px 0;
@@ -452,7 +466,7 @@ ul.multi-column-dropdown h6 {
 
 .callbacks_tabs {
     list-style: none;
-    margin-top:20px;
+    margin-top: 20px;
     z-index: 999;
     padding: 0;
     display: flex;
@@ -544,7 +558,7 @@ ul.multi-column-dropdown h6 {
     padding: 10px 0;
     text-align: center;
     margin: 40px 0 30px;
-    word-wrap:break-word ;
+    word-wrap: break-word;
 }
 
 .shipping-grid {
@@ -2103,11 +2117,13 @@ p.click a:hover {
 .contact-form input[type=submit] {
     border: none;
     color: #ffffff;
-    padding: 13px 43px;
+    padding: 13px 83px;
+    border-radius: 50px;
     font-size: 14px;
     cursor: pointer;
     font-weight: 500;
     background: #D39D5D;
+    margin-left: 38%;
 }
 
 .contact-form input[type=submit]:hover {
