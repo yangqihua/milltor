@@ -7,6 +7,7 @@
 	<script src="js/jquery.min.js"></script>
 	<!-- Custom Theme files -->
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="js/layui/css/layui.css">
 	<!-- Custom Theme files -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -22,6 +23,7 @@ Lipstick tube"/>
 	<!--webfont-->
 	<!-- for bootstrap working -->
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+	<script src="js/layui/layui.all.js"></script>
 	<!-- //for bootstrap working -->
 	<!-- cart -->
 	<script src="js/simpleCart.min.js"></script>
@@ -69,9 +71,11 @@ Lipstick tube"/>
 				JiangSu Milltor Packaging Company Ltd., a professional high quality cosmetic container manufactory,
 
 				We use the most advanced equipment and technology in aluminum and
-				plastic products design, mold design, stamping, automatic polishing, positive oxidation, multiple coloring, silk
+				plastic products design, mold design, stamping, automatic polishing, positive oxidation, multiple
+				coloring, silk
 
-				screen printing, etc. Major products contain perfume spray, rouge tube, aluminum cosmetic bottles series and essential oil atomiser bottle series.
+				screen printing, etc. Major products contain perfume spray, rouge tube, aluminum cosmetic bottles series
+				and essential oil atomiser bottle series.
 			</p>
 
 			<p>
@@ -92,25 +96,25 @@ Lipstick tube"/>
 
 				to cooperate with customers, we believe that we can provide the best profit to customers during our
 
-				cooperation and be the best partner to you. our email :  <span style="color:#D39D5D;"><b>milltor-service@outlook.com</b></span>
+				cooperation and be the best partner to you. our email : <span style="color:#D39D5D;"><b>milltor-service@outlook.com</b></span>
 			</p>
 		</div>
 		<div class="contact-form" style="margin-top: 40px;">
 			<div class="contact-info">
 				<h3>CONTACT FORM</h3>
 			</div>
-			<form>
+			<div id="contact-form">
 				<div class="contact-left">
-					<input type="text" placeholder="Name" required>
-					<input type="text" placeholder="E-mail" required>
-					<input type="text" placeholder="Subject" required>
+					<input id="name" type="text" placeholder="Name" required>
+					<input id="email" type="text" placeholder="E-mail" required>
+					<input id="subject" type="text" placeholder="Subject" required>
 				</div>
 				<div class="contact-right">
-					<textarea placeholder="Message" required></textarea>
+					<textarea id="message" placeholder="Message" required></textarea>
 				</div>
 				<div class="clearfix"></div>
 				<input type="submit" value="SUBMIT">
-			</form>
+			</div>
 		</div>
 	</div>
 </div>
@@ -121,11 +125,8 @@ Lipstick tube"/>
 		<div class="join">
 			<h6>JOIN OUR MAILING LIST</h6>
 			<div class="sub-left-right">
-				<form>
-					<input type="text" value="Enter Your Email Here" onfocus="this.value = '';"
-					       onblur="if (this.value == '') {this.value = 'Enter Your Email Here';}"/>
-					<input type="submit" value="SUBSCRIBE"/>
-				</form>
+				<input type="text" placeholder="Enter Your Email Here"/>
+				<input type="submit" value="SUBSCRIBE"/>
 			</div>
 			<div class="clearfix"></div>
 		</div>
@@ -141,5 +142,32 @@ Lipstick tube"/>
 		</div>
 	</div>
 </div>
+<script type="application/javascript">
+    $('#contact-form input[type="submit"]').on('click', function (e) {
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var subject = $('#subject').val();
+        var message = $('#message').val();
+
+        if (matchEmail(email)) {
+            var url = 'http://www.qu-gou.com/shishicai/public/index.php/api/milltor/milltor/send_mail';
+            var data = {name: name, email: email, message: message, subject: subject}
+            $.post(url, data, function (result) {
+                layer.confirm(result.msg.message, {
+                    title: 'Tips',
+                    skin: 'layui-layer-molv', //样式类名
+                    btn: ['confirm'] //按钮
+                });
+            })
+        } else {
+            layer.confirm('please input correct email', {
+                title: 'Tips',
+                shadeClose: true, //开启遮罩关闭
+                skin: 'layui-layer-molv', //样式类名
+                btn: ['confirm'] //按钮
+            });
+        }
+    })
+</script>
 </body>
 </html>

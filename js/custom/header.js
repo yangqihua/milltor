@@ -47,7 +47,33 @@ $(function () {
         });
     })
 
+    $('.join input[type="submit"]').on('click',function (e) {
+        var email = $('.join input[type="text"]').val();
+        if(matchEmail(email)){
+            var url = 'http://www.qu-gou.com/shishicai/public/index.php/api/milltor/milltor/send_mail';
+            var data = {name:'订阅name',email:email,message:'订阅message',subject:'订阅subject'}
+            $.post(url,data,function (result) {
+                layer.confirm(result.msg.message, {
+                    title: 'Tips',
+                    skin: 'layui-layer-molv', //样式类名
+                    btn: ['confirm'] //按钮
+                });
+            })
+        }else{
+            layer.confirm('please input correct email', {
+                title: 'Tips',
+                shadeClose: true, //开启遮罩关闭
+                skin: 'layui-layer-molv', //样式类名
+                btn: ['confirm'] //按钮
+            });
+        }
+    })
+
 });
+
+function matchEmail(email) {
+    return email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/);
+}
 
 function getRequest() {
     var url = location.search; //获取url中"?"符后的字串
